@@ -10,8 +10,6 @@ package dynamicprograming;
  * @author shivam
  */
 public class UglyNumber {
-     /*This function divides a by greatest 
-    divisible power of b*/
      int maxDivide(int a, int b) 
     { 
         while(a % b == 0) 
@@ -20,8 +18,6 @@ public class UglyNumber {
         return a; 
     } 
       
-    /* Function to check if a number  
-    is ugly or not */
      int isUgly(int no) 
     { 
         no = maxDivide(no, 2); 
@@ -33,17 +29,12 @@ public class UglyNumber {
         return (no == 1)? 1 : 0; 
     } 
       
-    /* Function to get the nth ugly  
-    number*/
      int getNthUglyNo(int n) 
     { 
         int i = 1; 
           
-        // ugly number count  
         int count = 1;  
           
-        // check for all integers  
-        // until count becomes n  
         while(n > count) 
         {
             
@@ -58,8 +49,6 @@ public class UglyNumber {
         return i; 
     } 
       
-    /* Driver program to test above 
-    functions */
     public void controller() 
     { 
         int no = getNthUglyNo(7); 
